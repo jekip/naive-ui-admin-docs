@@ -16,6 +16,9 @@
 # 拉取代码
 git clone https://github.com/jekip/naive-ui-admin-doc
 
+# 进入项目目录
+cd naive-ui-admin-doc
+
 # 安装依赖
 yarn
 
