@@ -1,10 +1,10 @@
-# naive-ui-admin-doc
+# naive-ui-admin-docs
 
 ## 如何本地开发
 
 ```bash
 # 克隆本仓库
-$ git clone git@github.com:jekip/naive-ui-admin-doc.git
+$ git clone https://github.com/jekip/naive-ui-admin-docs.git
 
 # 或者使用 yarn
 $ yarn install
