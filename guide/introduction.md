@@ -6,7 +6,7 @@
 
 ## 文档
 
-- 中文文档地址为 [naive-ui-admin-doc](https://github.com/jekip/naive-ui-admin-doc)，采用 Vitepress 开发。如发现文档有误，欢迎提 pr 帮助我们改进。
+- 中文文档地址为 [naive-ui-admin-docs](https://github.com/jekip/naive-ui-admin-docs)，采用 Vitepress 开发。如发现文档有误，欢迎提 pr 帮助我们改进。
 
 ### 本地运行文档
 
@@ -14,10 +14,10 @@
 
 ```bash
 # 拉取代码
-git clone https://github.com/jekip/naive-ui-admin-doc
+git clone https://github.com/jekip/naive-ui-admin-docs
 
 # 进入项目目录
-cd naive-ui-admin-doc
+cd naive-ui-admin-docs
 
 # 安装依赖
 yarn

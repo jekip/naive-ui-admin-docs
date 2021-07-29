@@ -387,6 +387,19 @@ export default defineComponent({
 </script>
 ```
 
+## 支持编辑组件
+```ts
+import {
+    NInput,
+    NSelect,
+    NCheckbox,
+    NInputNumber,
+    NSwitch,
+    NDatePicker,
+    NTimePicker,
+} from 'naive-ui';
+```
+
 ## Props
 
 ::: tip 温馨提醒

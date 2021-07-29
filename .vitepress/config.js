@@ -76,7 +76,7 @@ function createNav() {
         },
         {
           text: '文档源码',
-          link: 'https://github.com/jekip/naive-ui-admin-doc',
+          link: 'https://github.com/jekip/naive-ui-admin-docs',
         },
         {
           text: '更新日志',
