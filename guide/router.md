@@ -244,6 +244,25 @@ export default defineComponent({
 });
 ```
 
+## 外联
+你也可以在侧边栏中配置一个外链，只要你在 name 中填写了合法的 url 路径，当你点击侧边栏的时候就会帮你新开这个页面。
+
+```ts
+{
+    path: '/external',
+    name: 'https://jekip.github.io/docs/',
+    meta: {
+        title: '文档地址',
+        icon: renderIcon(CheckCircleOutlined),
+        sort: 4,
+    }
+}
+```
+::: warning 注意事项
+- `path` 不能为链接，必须为 `/` 开头字符串
+- 子路由都不要以`/`开头，跳转外部地址，只需把 `name` 填写完整网址即可
+:::
+
 ### 如何开启单个页面缓存
 
 开启缓存有 3 个条件
