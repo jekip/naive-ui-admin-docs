@@ -61,7 +61,6 @@ export default routes;
 ::: warning 注意事项
 
 - 整个项目所有路由 `name` 不能重复
-- 所有的多级路由最终都会转成二级路由，所以不能内嵌子路由
 - 除了 layout 对应的 path 前面需要加 `/`，其余子路由都不要以`/`开头
 
 :::
@@ -247,7 +246,7 @@ export default defineComponent({
 
 ### 如何开启单个页面缓存
 
-开启缓存有 1 个条件
+开启缓存有 3 个条件
 
 1. 在router中meta内将`keepAlive` 设置为 `true`
 2. 路由设置 `name`，且**不能重复**
