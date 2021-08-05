@@ -150,6 +150,8 @@ export interface RouteMeta {
   keepAlive: boolean;
   //排序越小越排前
   sort: number;
+  //取消自动计算根路由模式
+  alwaysShow: boolean
 }
 ```
 
@@ -262,6 +264,33 @@ export default defineComponent({
 - `path` 不能为链接，必须为 `/` 开头字符串
 - 子路由都不要以`/`开头，跳转外部地址，只需把 `name` 填写完整网址即可
 :::
+
+## 根路由
+系统已经帮你做了判断，当一个路由下面的 children 声明的路由大于>1 个时，自动会变成嵌套的模式。
+如果子路由正好等于一个就会默认将子路由作为根路由显示在侧边栏中，若不想这样，可以通过设置在根路由meta中设置`alwaysShow: true`来取消这一特性
+
+```ts
+{
+    path: '/external',
+    name: 'external',
+    component: Layout,    
+    meta: {
+        sort: 4, //排序依然还是在这里定义
+        alwaysShow: true
+    },
+    children: [
+        {
+            path: 'console',
+            name: `console`,
+            meta: {
+                title: '主控台',
+                permission: ['dashboard_console'],
+            },
+            component: () => import('@/views/dashboard/console/console.vue'),
+        }
+    ]   
+}
+```
 
 ### 如何开启单个页面缓存
 

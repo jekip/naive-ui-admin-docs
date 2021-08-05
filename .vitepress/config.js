@@ -98,6 +98,10 @@ function createSidebar() {
         text: '常用组件',
         children: [
           {
+            text: '表单',
+            link: '/components/form',
+          },
+          {
             text: '表格',
             link: '/components/table',
           },
