@@ -152,6 +152,13 @@ export interface RouteMeta {
   sort: number;
   //取消自动计算根路由模式
   alwaysShow: boolean
+  // 当路由设置了该属性，则会高亮相对应的侧边栏。
+  // 这在某些场景非常有用，比如：一个列表页路由为：/list/basic-list
+  // 点击进入详情页，这时候路由为/list/basic-info/1，但你想在侧边栏高亮列表的路由，就可以进行如下设置
+  // 注意是配置高亮路由 `name`，不是path
+  activeMenu: string;
+  //是否跟路由 顶部混合菜单，必须传 true，否则左侧会显示异常（场景就是，分割菜单之后，当一级菜单没有子菜单）
+  isRoot: boolean;  
 }
 ```
 
@@ -276,7 +283,6 @@ export default defineComponent({
     component: Layout,    
     meta: {
         sort: 4, //排序依然还是在这里定义
-        alwaysShow: true
     },
     children: [
         {

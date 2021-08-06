@@ -112,6 +112,10 @@ function createSidebar() {
           {
             text: '滑块验证码',
             link: '/components/market-captcha',
+          },
+          {
+            text: '弹窗',
+            link: '/components/modal',
           }
         ],
       },
