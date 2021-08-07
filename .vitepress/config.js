@@ -3,7 +3,8 @@
  * @type {import('vitepress').UserConfig}
  */
 module.exports = {
-  base: '/docs/',
+  base: '/',
+  dest: '/',
   title: 'Naive-Ui-Admin',
   lang: 'zh-CN',
   description: '一个开箱即用的前端框架',
