@@ -6,7 +6,7 @@ module.exports = {
   dest: 'public',
   title: 'Naive-Ui-Admin',
   lang: 'zh-CN',
-  description: '一个开箱即用的前端框架',
+  description: '一个开箱即用前端框架',
   head: createHead(),
   themeConfig: {
     repo: 'jekip/naive-ui-admin',
