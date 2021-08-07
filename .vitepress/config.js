@@ -71,7 +71,7 @@ function createNav() {
       items: [
         {
           text: '在线预览',
-          link: 'https://jekip.github.io/',
+          link: 'https://naive-ui-admin.vercel.app',
         },
         {
           text: '文档源码',

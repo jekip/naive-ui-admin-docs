@@ -5,7 +5,7 @@ actionText: 快速开始 →
 actionLink: /guide/introduction
 
 altActionText: 在线预览
-altActionLink: https://jekip.github.io/
+altActionLink: https://naive-ui-admin.vercel.app
 
 features:
   - title: 💡 最新技术栈
