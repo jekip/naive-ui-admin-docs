@@ -158,7 +158,9 @@ export interface RouteMeta {
   // 注意是配置高亮路由 `name`，不是path
   activeMenu: string;
   //是否跟路由 顶部混合菜单，必须传 true，否则左侧会显示异常（场景就是，分割菜单之后，当一级菜单没有子菜单）
-  isRoot: boolean;  
+  isRoot: boolean;
+  //内联外部地址
+  frameSrc: string;  
 }
 ```
 
@@ -254,7 +256,7 @@ export default defineComponent({
 ```
 
 ## 外联
-你也可以在侧边栏中配置一个外链，只要你在 name 中填写了合法的 url 路径，当你点击侧边栏的时候就会帮你新开这个页面。
+在侧边栏中配置一个外链，只要你在 name 中填写了合法的 url 路径，当你点击侧边栏的时候就会帮你新开这个页面。
 
 ```ts
 {
@@ -271,6 +273,51 @@ export default defineComponent({
 - `path` 不能为链接，必须为 `/` 开头字符串
 - 子路由都不要以`/`开头，跳转外部地址，只需把 `name` 填写完整网址即可
 :::
+
+## 内联
+在侧边栏中配置一个内联外部地址，只要你在 meta.frameSrc 填写了合法的 url 路径，当你点击侧边栏的时候就会帮你内联显示这个页面。
+
+```ts
+import { RouteRecordRaw } from 'vue-router';
+import { Layout } from '@/router/constant';
+import { DesktopOutline } from '@vicons/ionicons5';
+import { renderIcon } from '@/utils/index';
+const IFrame = () => import('@/views/iframe/index.vue');
+const routes: Array<RouteRecordRaw> = [
+    {
+        path: '/frame',
+        name: 'Frame',
+        redirect: '/frame/docs',
+        component: Layout,
+        meta: {
+            title: '外部页面',
+            sort: 9,
+            icon: renderIcon(DesktopOutline),
+        },
+        children: [
+            {
+                path: 'docs',
+                name: 'frame-docs',
+                meta: {
+                    title: '项目文档(内嵌)',
+                    frameSrc: 'https://naive-ui-admin-docs.vercel.app',
+                },
+                component: IFrame,
+            },
+            {
+                path: 'naive',
+                name: 'frame-naive',
+                meta: {
+                    title: 'NaiveUi(内嵌)',
+                    frameSrc: 'https://www.naiveui.com',
+                },
+                component: IFrame,
+            },
+        ],
+    },
+];
+export default routes;
+```
 
 ## 根路由
 系统已经帮你做了判断，当一个路由下面的 children 声明的路由大于>1 个时，自动会变成嵌套的模式。

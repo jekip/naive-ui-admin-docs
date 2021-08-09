@@ -143,7 +143,7 @@ export default routes;
     setup() {
       const { hasPermission } = usePermission();
 
-      return { hasPermission };
+      return { hasPermission, RoleEnum };
     },
   });
 </script>
