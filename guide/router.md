@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
             title: 'Dashboard',
             icon: renderIcon(DashboardOutlined),
-            permission: ['dashboard_console', 'dashboard_console', 'dashboard_workplace'],
+            permissions: ['dashboard_console', 'dashboard_console', 'dashboard_workplace'],
             sort: 0,
         },
         children: [
@@ -36,7 +36,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: `${routeName}_console`,
                 meta: {
                     title: '主控台',
-                    permission: ['dashboard_console'],
+                    permissions: ['dashboard_console'],
                 },
                 component: () => import('@/views/dashboard/console/console.vue'),
             },
@@ -46,7 +46,7 @@ const routes: Array<RouteRecordRaw> = [
                 meta: {
                     title: '工作台',
                     keepAlive: true,
-                    permission: ['dashboard_workplace'],
+                    permissions: ['dashboard_workplace'],
                 },
                 component: () => import('@/views/dashboard/workplace/workplace.vue'),
             },
@@ -62,7 +62,7 @@ export default routes;
 
 - 整个项目所有路由 `name` 不能重复
 - 除了 layout 对应的 path 前面需要加 `/`，其余子路由都不要以`/`开头
-
+- 多级路由，当没有配置时，`redirect` ，`redirect` 默认为第一个子路由，配置则优先按配置
 :::
 
 **示例**
@@ -144,7 +144,7 @@ export interface RouteMeta {
   title: string;
   //禁用菜单
   disabled:boolean;
-  // 菜单图标  
+  //菜单图标  
   icon: VNode;
   //缓存该路由
   keepAlive: boolean;
@@ -160,7 +160,9 @@ export interface RouteMeta {
   //是否跟路由 顶部混合菜单，必须传 true，否则左侧会显示异常（场景就是，分割菜单之后，当一级菜单没有子菜单）
   isRoot: boolean;
   //内联外部地址
-  frameSrc: string;  
+  frameSrc: string;
+  //菜单包含权限集合，满足其中一个就会显示
+  permissions: string[];
 }
 ```
 

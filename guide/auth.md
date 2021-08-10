@@ -19,7 +19,7 @@
 ```ts
 const setting: setting = {
     //菜单权限模式 ROLE 前端固定角色  BACK 动态获取
-    permissionMode: 'ROLE'
+    permissionsMode: 'ROLE'
 };
 ```
 
@@ -28,6 +28,8 @@ const setting: setting = {
 **实现原理:** 在前端固定，路由表对应的组件映射map，通过API获取路由表，动态生成路由，再通过 `router.addRoutes` 添加到路由实例，实现权限的过滤。
 
 **缺点:** 前端需要维护一个路由表，保持和后端一致，如果后台改动角色，前台也需要跟着改动。
+
+**提示:** 多级路由，当没有配置时，`redirect` ，`redirect` 默认为第一个子路由，配置则优先按配置
 
 #### 实现
 
@@ -49,7 +51,7 @@ const routes: Array<RouteRecordRaw> = [
             title: 'Dashboard',
             icon: renderIcon(DashboardOutlined),
             //这里配置父级路由需要哪些权限可访问 这里是子路由权限集合
-            permission: ['dashboard_console', 'dashboard_console', 'dashboard_workplace'],
+            permissions: ['dashboard_console', 'dashboard_console', 'dashboard_workplace'],
             sort: 0,
         },
         children: [
@@ -59,7 +61,7 @@ const routes: Array<RouteRecordRaw> = [
                 meta: {
                     title: '主控台',
                     //配置该路由需要哪些权限可访问 这里是针对单个路由
-                    permission: ['dashboard_console'],
+                    permissions: ['dashboard_console'],
                 },
                 component: () => import('@/views/dashboard/console/console.vue'),
             },
@@ -102,7 +104,7 @@ const routes: Array<RouteRecordRaw> = [
             title: 'Dashboard',
             icon: renderIcon(DashboardOutlined),
             //这里配置父级路由需要哪些权限可访问 这里是子路由权限集合
-            permission: ['dashboard_console', 'dashboard_console', 'dashboard_workplace'],
+            permissions: ['dashboard_console', 'dashboard_console', 'dashboard_workplace'],
             sort: 0,
         },
         children: [
@@ -112,7 +114,7 @@ const routes: Array<RouteRecordRaw> = [
                 meta: {
                     title: '主控台',
                     //配置该路由需要哪些权限可访问 这里是针对单个路由
-                    permission: ['dashboard_console'],
+                    permissions: ['dashboard_console'],
                 },
                 component: () => import('@/views/dashboard/console/console.vue'),
             },
@@ -127,23 +129,23 @@ export default routes;
 
 **函数方式**
 
-[usePermission](https://github.com/jekip/naive-ui-admin.git/tree/main/src/hooks/web/usePermission.ts) 还提供了按钮级别的权限控制。
+[usepermissions](https://github.com/jekip/naive-ui-admin.git/tree/main/src/hooks/web/usepermissions.ts) 还提供了按钮级别的权限控制。
 
 ```vue
 <template>
-  <n-button v-if="hasPermission([RoleEnum.ADMIN, RoleEnum.NORMAL])">
+  <n-button v-if="haspermissions([RoleEnum.ADMIN, RoleEnum.NORMAL])">
     拥有[admin,normal]权限可见
   </n-button>
 </template>
 <script lang="ts">
-  import { usePermission } from '@/hooks/web/usePermission';
+  import { usepermissions } from '@/hooks/web/usepermissions';
   import { RoleEnum } from '@/enums/roleEnum';
 
   export default defineComponent({
     setup() {
-      const { hasPermission } = usePermission();
+      const { haspermissions } = usepermissions();
 
-      return { hasPermission, RoleEnum };
+      return { haspermissions, RoleEnum };
     },
   });
 </script>
@@ -159,5 +161,5 @@ export default routes;
 
 ```html
 @param seffect 'disabled' 禁用按钮 不传 默认移除按钮
-<n-button v-permission="{action:['RoleEnum.ADMIN, RoleEnum.NORMAL'], effect:'disabled'}" type="primary" class="mx-4"> 拥有admin,normal角色权限可见</n-button>
+<n-button v-permissions="{action:['RoleEnum.ADMIN, RoleEnum.NORMAL'], effect:'disabled'}" type="primary" class="mx-4"> 拥有admin,normal角色权限可见</n-button>
 ```
