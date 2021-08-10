@@ -18,8 +18,8 @@
 
 ```ts
 const setting: setting = {
-    //菜单权限模式 ROLE 前端固定角色  BACK 动态获取
-    permissionsMode: 'ROLE'
+    //菜单权限模式 FIXED 前端固定路由  BACK 动态获取
+    permissionMode: 'FIXED',
 };
 ```
 
