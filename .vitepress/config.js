@@ -74,8 +74,12 @@ function createNav() {
           link: 'https://naive-ui-admin.vercel.app',
         },
         {
+          text: '项目源码',
+          link: 'https://github.com/jekip/naive-ui-admin',
+        },
+        {
           text: '文档源码',
-          link: 'https://github.com/jekip/naive-ui-admin-docs',
+          link: 'https://naive-ui-admin-docs.vercel.app',
         },
         {
           text: '更新日志',
