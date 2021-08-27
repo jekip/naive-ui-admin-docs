@@ -1,9 +1,9 @@
 {
-  "name": "vben-admin-docs",
+  "name": "naive-ui-admin-pro",
   "version": "1.5.3",
   "main": "index.js",
   "repository": "https://github.com/jekip/naive-ui-admin.git-doc",
-  "author": "Vben <anncwb@126.com>",
+  "author": "Ah jung <735878602@qq.com>",
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev",
