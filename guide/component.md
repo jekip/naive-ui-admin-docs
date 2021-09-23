@@ -2,7 +2,7 @@
 
 ## 按需引入
 
-项目目前用到的组件，都在这引入了，需要其他的在这加即可 [src/plugins/naive.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/src/plugins/naive.ts)。
+项目目前用到的组件，都在这引入了，需要其他的在这加即可 [src/plugins/naive.ts](https://github.com/jekip/naive-ui-admin/tree/main/src/plugins/naive.ts)。
 
 ```ts
 import { NMenu } from 'naive-ui';

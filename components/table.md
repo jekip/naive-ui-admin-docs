@@ -482,7 +482,6 @@ import {
 | ---------------- | --------------------------------------- | ----------------------------------- |
 | fetch-success    | `Function({items,total})`               | 接口请求成功后触发                  |
 | fetch-error      | `Function(error)`                       | 错误信息                            |
-| selection-change | `Function({keys，rows})`                | 勾选事件触发                        |
 | edit-end         | `Function({record, index, key, value})` | 单元格编辑完成触发                  |
 | edit-cancel      | `Function({record, index, key, value})` | 单元格取消编辑触发                  |
 | edit-row-end     | `Function()`                            | 行编辑结束触发                      |

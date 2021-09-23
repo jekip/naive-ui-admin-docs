@@ -10,7 +10,7 @@
 
 开发环境时候，接口地址在项目根目录下
 
-[.env.development](https://github.com/jekip/naive-ui-admin.git/tree/main/.env.development) 文件配置
+[.env.development](https://github.com/jekip/naive-ui-admin/tree/main/.env.development) 文件配置
 
 ```bash
 # vite 本地跨域代理
@@ -98,7 +98,7 @@ server: {
 
 ## 生产环境
 
-生产环境接口地址在项目根目录下 [.env.production](https://github.com/jekip/naive-ui-admin.git/tree/main/.env.production) 文件配置。
+生产环境接口地址在项目根目录下 [.env.production](https://github.com/jekip/naive-ui-admin/tree/main/.env.production) 文件配置。
 
 生产环境接口地址值需要修改 **VITE_GLOB_API_URL**，如果出现跨域问题，可以使用 nginx 或者后台开启 cors 进行处理
 
@@ -120,7 +120,7 @@ server: {
 4. 获取服务端返回数据
 5. 更新 data；
 
-接口统一存放于 [src/api/](https://github.com/jekip/naive-ui-admin.git/tree/main/src/api) 下面管理
+接口统一存放于 [src/api/](https://github.com/jekip/naive-ui-admin/tree/main/src/api) 下面管理
 
 以登陆接口为例:
 
@@ -147,7 +147,7 @@ export function getTableList(params) {
 
 ## axios 配置
 
-**axios** 请求封装存放于 [src/utils/http/axios](https://github.com/jekip/naive-ui-admin.git/tree/main/src/utils/http/axios) 文件夹内部
+**axios** 请求封装存放于 [src/utils/http/axios](https://github.com/jekip/naive-ui-admin/tree/main/src/utils/http/axios) 文件夹内部
 
 除 `index.ts` 文件内容需要根据项目自行修改外，其余文件无需修改
 
@@ -428,7 +428,7 @@ const transform: AxiosTransform = {
 
 ### 多个接口地址
 
-当项目中需要用到多个接口地址时, 可以在 [src/utils/http/axios/index.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/src/utils/http/axios/index.ts) 导出多个 axios 实例
+当项目中需要用到多个接口地址时, 可以在 [src/utils/http/axios/index.ts](https://github.com/jekip/naive-ui-admin/tree/main/src/utils/http/axios/index.ts) 导出多个 axios 实例
 
 ```ts
 // 目前只导出一个默认实例，接口地址对应的是环境变量中的 VITE_GLOB_API_URL 接口地址
@@ -553,7 +553,7 @@ mock 的值可以直接使用 [mockjs](https://github.com/nuysoft/Mock/wiki) 的
 
 #### util 说明
 
-可在 [代码](https://github.com/jekip/naive-ui-admin.git/tree/main/mock/_util.ts) 中查看
+可在 [代码](https://github.com/jekip/naive-ui-admin/tree/main/mock/_util.ts) 中查看
 
 ::: tip
 
@@ -645,7 +645,7 @@ export default [
 VITE_USE_MOCK = true;
 ```
 
-2. 在 [mock/\_createProductionServer.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/mock/_createProductionServer.ts) 文件中引入需要的 mock 文件
+2. 在 [mock/\_createProductionServer.ts](https://github.com/jekip/naive-ui-admin/tree/main/mock/_createProductionServer.ts) 文件中引入需要的 mock 文件
 
 ```ts
 import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer';
@@ -665,7 +665,7 @@ export function setupProdMockServer() {
 }
 ```
 
-3. 在 [build/vite/plugin/mock.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/build/vite/plugin/mock.ts) 里面引入
+3. 在 [build/vite/plugin/mock.ts](https://github.com/jekip/naive-ui-admin/tree/main/build/vite/plugin/mock.ts) 里面引入
 
 ```ts
 import { viteMockServe } from 'vite-plugin-mock';

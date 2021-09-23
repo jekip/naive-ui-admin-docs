@@ -116,7 +116,7 @@ window.__PRODUCTION__VUE_VBEN_ADMIN__CONF__ = {
 
 ### 如何获取全局变量
 
-想要获取 `_app.config.js` 内的变量，可以使用 [src/hooks/setting/index.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/src/hooks/setting/index.ts) 提供的函数来进行获取
+想要获取 `_app.config.js` 内的变量，可以使用 [src/hooks/setting/index.ts](https://github.com/jekip/naive-ui-admin/tree/main/src/hooks/setting/index.ts) 提供的函数来进行获取
 
 ### 如何新增(新增一个可动态修改的配置项)
 
@@ -124,7 +124,7 @@ window.__PRODUCTION__VUE_VBEN_ADMIN__CONF__ = {
 
 2. `VITE_GLOB_` 开头的变量会自动加入环境变量，通过在 `src/types/config.d.ts` 内修改 `GlobEnvConfig` 和 `GlobConfig` 两个环境变量的值来定义新添加的类型
 
-3. [useGlobSetting](https://github.com/jekip/naive-ui-admin.git/tree/main/src/hooks/setting/index.ts) 函数中添加刚新增的返回值即可
+3. [useGlobSetting](https://github.com/jekip/naive-ui-admin/tree/main/src/hooks/setting/index.ts) 函数中添加刚新增的返回值即可
 
 ```js
 const {
@@ -157,7 +157,7 @@ export const useGlobSetting = (): SettingWrap => {
 
 :::
 
-[src/settings/projectSetting.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/src/settings/projectSetting.ts)
+[src/settings/projectSetting.ts](https://github.com/jekip/naive-ui-admin/tree/main/src/settings/projectSetting.ts)
 
 ```ts
 const setting = {
@@ -209,7 +209,7 @@ export default setting;
 
 ### 组件配置
 
-[src/settings/componentSetting.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/src/settings/componentSetting.ts)
+[src/settings/componentSetting.ts](https://github.com/jekip/naive-ui-admin/tree/main/src/settings/componentSetting.ts)
 
 ```ts
 export default {
@@ -247,7 +247,7 @@ export default {
 
 ### 主题配置
 
-[src/settings/designSetting.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/src/settings/designSetting.ts)
+[src/settings/designSetting.ts](https://github.com/jekip/naive-ui-admin/tree/main/src/settings/designSetting.ts)
 
 ```ts
 // app theme preset color

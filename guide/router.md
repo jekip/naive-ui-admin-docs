@@ -1,12 +1,12 @@
 # 路由
 
-项目路由配置存放于 [src/router](https://github.com/jekip/naive-ui-admin/tree/main/src/router) 下面。 [src/router/modules](https://github.com/jekip/naive-ui-admin.git/tree/main/src/router/modules)用于存放路由模块，在该目录下的文件会自动注册。
+项目路由配置存放于 [src/router](https://github.com/jekip/naive-ui-admin/tree/main/src/router) 下面。 [src/router/modules](https://github.com/jekip/naive-ui-admin/tree/main/src/router/modules)用于存放路由模块，在该目录下的文件会自动注册。
 
 ## 配置
 
 ### 模块说明
 
-在 [src/router/modules](https://github.com/jekip/naive-ui-admin.git/tree/main/src/router/modules) 内的 `.ts` 文件会被视为一个路由模块。
+在 [src/router/modules](https://github.com/jekip/naive-ui-admin/tree/main/src/router/modules) 内的 `.ts` 文件会被视为一个路由模块。
 
 一个路由模块包含以下结构
 
@@ -148,6 +148,8 @@ export interface RouteMeta {
   icon: VNode;
   //缓存该路由
   keepAlive: boolean;
+  //隐藏菜单
+  hidden: boolean;  
   //排序越小越排前
   sort: number;
   //取消自动计算根路由模式
@@ -174,7 +176,7 @@ export interface RouteMeta {
 
 ### 如何新增一个路由模块
 
-1. 在 [src/router/modules](https://github.com/jekip/naive-ui-admin.git/tree/main/src/router/modules) 内新增一个模块文件。
+1. 在 [src/router/modules](https://github.com/jekip/naive-ui-admin/tree/main/src/router/modules) 内新增一个模块文件。
 
 示例，新增 test.ts 文件
 
@@ -210,7 +212,7 @@ const routes: Array<RouteRecordRaw> = [
 export default routes;
 ```
 
-此时路由已添加完成，不需要手动引入，放在[src/router/modules](https://github.com/jekip/naive-ui-admin.git/tree/main/src/router/modules) 内的文件会自动被加载。
+此时路由已添加完成，不需要手动引入，放在[src/router/modules](https://github.com/jekip/naive-ui-admin/tree/main/src/router/modules) 内的文件会自动被加载。
 
 ### 验证
 
@@ -232,7 +234,7 @@ router.push({
 
 ### Redirect
 
-[src/views/redirect/index.vue](https://github.com/jekip/naive-ui-admin.git/tree/main/src/views/redirect/index.vue)
+[src/views/redirect/index.vue](https://github.com/jekip/naive-ui-admin/tree/main/src/views/redirect/index.vue)
 
 ```ts
 import { defineComponent, onBeforeMount } from 'vue';

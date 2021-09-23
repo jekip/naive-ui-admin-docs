@@ -8,7 +8,7 @@
 
 ## 前端角色权限
 
-**实现原理:** 在前端固定写死路由的权限，指定路由有哪些权限可以查看。只初始化通用的路由，需要权限才能访问的路由没有被加入路由表内。在登陆后或者其他方式获取用户角色后，通过角色去遍历路由表，获取该角色可以访问的路由表，生成路由表，再通过 `router.addRoutes` 添加到路由实例，实现权限的过滤。
+**实现原理:** 在前端固定写死路由的权限，指定路由有哪些权限可以查看。只初始化通用的路由，需要权限才能访问的路由没有被加入路由表内。在登陆后或者其他方式获取用户角色后，通过角色去遍历路由表，获取该角色可以访问的路由表，生成路由表，再通过 `router.addRoute` 添加到路由实例，实现权限的过滤。
 
 **缺点:** 权限相对不自由，如果后台改动角色，前台也需要跟着改动。适合角色较固定的系统
 
@@ -25,7 +25,7 @@ const setting: setting = {
 
 ## 后台动态路由
 
-**实现原理:** 在前端固定，路由表对应的组件映射map，通过API获取路由表，动态生成路由，再通过 `router.addRoutes` 添加到路由实例，实现权限的过滤。
+**实现原理:** 在前端固定，路由表对应的组件映射map，通过API获取路由表，动态生成路由，再通过 `router.addRoute` 添加到路由实例，实现权限的过滤。
 
 **缺点:** 前端需要维护一个路由表，保持和后端一致，如果后台改动角色，前台也需要跟着改动。
 
@@ -72,7 +72,7 @@ export default routes;
 ```
 ::: warning 注意
 
-后端接口返回的数据结构请参考，[/mock/user/menu.ts](https://github.com/jekip/naive-ui-admin.git/tree/main/mock/user/menu.ts) `menusList`
+后端接口返回的数据结构请参考，[/mock/user/menu.ts](https://github.com/jekip/naive-ui-admin/tree/main/mock/user/menu.ts) `menusList`
 
 :::
 
@@ -129,7 +129,7 @@ export default routes;
 
 **函数方式**
 
-[usepermissions](https://github.com/jekip/naive-ui-admin.git/tree/main/src/hooks/web/usepermissions.ts) 还提供了按钮级别的权限控制。
+[usePermissions](https://github.com/jekip/naive-ui-admin/blob/main/src/hooks/web/usePermission.ts) 还提供了按钮级别的权限控制。
 
 ```vue
 <template>

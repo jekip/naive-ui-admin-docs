@@ -6,7 +6,7 @@
 
 默认使用 less 作为预处理语言，建议在使用前或者遇到疑问时学习一下 [Less](http://lesscss.org/) 的相关特性（如果想获取基础的 CSS 知识或查阅属性，请参考 [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)）。
 
-项目中使用的通用样式，都存放于 [src/styles/](https://github.com/jekip/naive-ui-admin.git/tree/main/src/styles) 下面。
+项目中使用的通用样式，都存放于 [src/styles/](https://github.com/jekip/naive-ui-admin/tree/main/src/styles) 下面。
 
 #### 以下`common`,`tailwind`文件已在 App.vue 中全局引入
 ```bash
