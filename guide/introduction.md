@@ -4,6 +4,16 @@
 
 [Naive Ui Admin](https://github.com/jekip/naive-ui-admin) 是一个基于 [Vue3.0](https://github.com/vuejs/vue-next)、[Vite](https://github.com/vitejs/vite)、 [Naive UI](https://www.naiveui.com/)、[TypeScript](https://www.typescriptlang.org/) 的中后台解决方案，它使用了最新的前端技术栈，并提炼了典型的业务模型，页面，包括二次封装组件、动态菜单、权限校验、粒子化权限控制等功能，它可以帮助你快速搭建企业级中后台项目，该项目使用最新的前端技术栈，相信不管是从新技术使用还是其他方面，都能帮助到你。
 
+## 提示
+
+如果这个版本的功能和组件，并不能满足您的需求，不妨看看，我们全新 `NaiveAdmin v2` 他或许能让您眼前一亮O(∩_∩)O哈哈~
+
+[NaiveAdmin 官网](https://www.naiveadmin.com)
+
+[NaiveAdmin v2 预览](https://pro.naiveadmin.com)
+
+[NaiveAdmin v2 变更日志](https://www.naiveadmin.com/guide/changelog)
+
 ## 文档
 
 - 中文文档地址为 [naive-ui-admin-docs](https://github.com/jekip/naive-ui-admin-docs)，采用 Vitepress 开发。如发现文档有误，欢迎提 pr 帮助我们改进。

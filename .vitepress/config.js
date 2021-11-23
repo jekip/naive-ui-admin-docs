@@ -70,26 +70,36 @@ function createNav() {
       text: '相关链接',
       items: [
         {
-          text: '在线预览',
+          text: '在线预览v1',
           link: 'https://naive-ui-admin.vercel.app',
         },
         {
-          text: '项目源码',
-          link: 'https://github.com/jekip/naive-ui-admin',
+          text: '在线预览v2',
+          link: 'https://pro.naiveadmin.com',
         },
         {
-          text: '文档源码',
-          link: 'https://naive-ui-admin-docs.vercel.app',
-        },
-        {
-          text: '更新日志',
+          text: '更新日志v1',
           link: 'https://github.com/jekip/naive-ui-admin/blob/main/CHANGELOG.md',
+        },
+        {
+          text: '更新日志v2',
+          link: 'https://www.naiveadmin.com/guide/changelog',
         },
       ],
     },
     {
       text: '赞助',
       link: '/other/donate',
+    },
+    {
+      text: '1.x',
+      link: '/other/donate',
+      items: [
+        {
+          text: '2.x',
+          link: 'https://www.naiveadmin.com',
+        },
+      ]
     },
   ];
 }
