@@ -165,6 +165,8 @@ export interface RouteMeta {
   frameSrc: string;
   //菜单包含权限集合，满足其中一个就会显示
   permissions: string[];
+  //是否固定 设置为 true 之后 多页签不可删除
+  affix: boolean
 }
 ```
 
