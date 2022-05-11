@@ -124,8 +124,6 @@ yarn
   "build:no-cache": "yarn clean:cache && npm run build",
   # 生成打包分析，在 `Mac OS` 电脑上执行完成后会自动打开界面，在 `Window` 电脑上执行完成后需要打开 `./build/.cache/stats.html` 查看
   "report": "cross-env REPORT=true npm run build",
-  # 类型检查
-  "type:check": "vue-tsc --noEmit --skipLibCheck",
   # 预览打包后的内容（先打包在进行预览）
   "preview": "npm run build && vite preview",
   # 直接预览本地 dist 文件目录
