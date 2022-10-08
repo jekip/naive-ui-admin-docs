@@ -173,7 +173,6 @@ yarn
 │   │   ├── images # 项目存放图片的文件夹
 │   │   └── svg # 项目存放svg图片的文件夹
 │   ├── components # 公共组件
-│   ├── design # 样式文件
 │   ├── directives # 指令
 │   ├── enums # 枚举/常量
 │   ├── hooks # hook
@@ -186,7 +185,6 @@ yarn
 │   │   ├── default # 默认布局
 │   │   ├── iframe # iframe布局
 │   │   └── page # 页面布局
-│   ├── locales # 多语言
 │   ├── logics # 逻辑
 │   ├── main.ts # 主入口
 │   ├── router # 路由配置

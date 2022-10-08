@@ -71,7 +71,7 @@ function createNav() {
       items: [
         {
           text: '在线预览v1',
-          link: 'https://naive-ui-admin.vercel.app',
+          link: 'https://v1.naiveadmin.com',
         },
         {
           text: '在线预览v2',
@@ -146,7 +146,7 @@ function createSidebar() {
             link: '/guide/',
           },
           {
-            text: '项目配置',
+            text: '配置',
             link: '/guide/settings',
           },
           {
